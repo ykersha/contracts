@@ -3,12 +3,6 @@
 
 ## Installation/deployment instructions
 
-Follow the instructions below to deploy your project.
-
-> **Requirements**: NodeJS `lts/fermium (v.14.15.0)`. If you're using [nvm](https://github.com/nvm-sh/nvm), run `nvm use` to ensure you're using the same Node version in local and in your lambda's runtime.
-
-### Using NPM
-
 - Run `npm i` to install the project dependencies
 - Run `sls dynamodb install` to be able to run dynamodb locally.
 - Run `sls offline start` to run the project locally
@@ -28,7 +22,7 @@ After running `sls offline start` the following endpoints will be accessible
 
 #### POST | http://localhost:3000/dev/login
 - Authenticates the user and returns a token.
-- Tokens are valid only for 30 minutes.
+- Tokens are only valid for 30 minutes.
 - Payload
 `{
     "username": "username",
