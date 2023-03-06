@@ -1,0 +1,21 @@
+{
+    "Table": {
+        "TableName": "ContractsTable-${self:provider.stage}",
+        "KeySchema": [
+            {
+                "AttributeName": "contractID",
+                "KeyType": "HASH"
+            }
+        ],
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "contractID",
+                "AttributeType": "S"
+            }
+        ],
+        "ProvisionedThroughput": {
+            "ReadCapacityUnits": 1,
+            "WriteCapacityUnits": 1
+        }
+    }
+}
